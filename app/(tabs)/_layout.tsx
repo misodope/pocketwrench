@@ -27,7 +27,16 @@ export default function TabLayout() {
             <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
           ),
         }}
-      /> 
+      />
+      <Tabs.Screen
+        name="mechanics"
+        options={{
+          title: 'Mechanics',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name={focused ? 'construct' : 'construct-outline'} color={color} size={24} />
+          ),
+        }}
+      />
       <Tabs.Screen
         name="fix"
         options={{
@@ -37,12 +46,22 @@ export default function TabLayout() {
           ),
         }}
       />
+
       <Tabs.Screen
-        name="help"
+        name="history"
         options={{
-          title: 'Help',
+          title: 'History',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24} />
+            <Ionicons name={focused ? 'time' : 'time-outline'} color={color} size={24} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name={focused ? 'person' : 'person-outline'} color={color} size={24} />
           ),
         }}
       />
