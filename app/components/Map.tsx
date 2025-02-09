@@ -93,8 +93,8 @@ export default function Map({ mechanics = [], onMechanicSelect }: MapProps) {
           <Marker
             key={mechanic.id}
             coordinate={{
-              latitude: mechanic.latitude,
-              longitude: mechanic.longitude,
+              latitude: mechanic.address.coordinates.lat,
+              longitude: mechanic.address.coordinates.lng,
             }}
             title={mechanic.name}
             description={`Rating: ${mechanic.rating}/5`}
